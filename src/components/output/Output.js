@@ -11,14 +11,16 @@ const Output = () => {
 
   const githubUserAPI = "https://api.github.com/users/" + params.username;
   useEffect(() => {
-    fetch("https://api.github.com/graphql", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authentication: "token 11d8b0f36ce132818cead3107f3b5d9db0784454",
-      },
-      body: JSON.stringify({
-        query: `
+    fetch(
+      "https://api.github.com/graphql?access_token=11d8b0f36ce132818cead3107f3b5d9db0784454",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authentication: "token 11d8b0f36ce132818cead3107f3b5d9db0784454",
+        },
+        body: JSON.stringify({
+          query: `
     query {
       user(login: "saviomartin") {
         bio
@@ -33,8 +35,9 @@ const Output = () => {
       }
     }
     `,
-      }),
-    })
+        }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
