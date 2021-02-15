@@ -1,3 +1,4 @@
+import { useQuery } from "@apollo/client";
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import RESUME_COMPONENTS from "../../query/GithubQuery";
