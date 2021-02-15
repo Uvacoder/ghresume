@@ -7,7 +7,7 @@ const Input = ({ username, handleUserName }) => {
 
   const openResumeForUsername = (e) => {
     if (e.keyCode === 13) {
-      history.push("/" + username);
+      history.push("/build/" + username);
     }
   };
 
