@@ -4,8 +4,12 @@ const allContributors = [
     github: "saviomartin",
   },
   {
-    name: "Bodhisha Martin",
-    github: "saviomartin",
+    name: "Martin KP",
+    github: "martinkp",
+  },
+  {
+    name: "Divya Xavier",
+    github: "martinkp",
   },
 ];
 
