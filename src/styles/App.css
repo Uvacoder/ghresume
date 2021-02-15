@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code", sans-serif;
+}
+.raleway {
+  font-family: "Raleway", sans-serif;
+}
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden !important;
+  background: linear-gradient(0deg, #fff, #f5effc);
+}
+.App {
+  height: 100vh;
+  width: 100%;
+}
+.github-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+.header {
+  width: 100%;
+  padding: 10px;
+}
+.logo {
+  background: linear-gradient(to top, #8557c6, #eb78f9);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main {
+  width: 100%;
+  height: 80vh;
+  padding: 0 15px;
+}
+.main__left {
+  height: 100%;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+.main__right {
+  height: 100%;
+  width: 50%;
+}
+.main__text {
+  font-size: 2.35em;
+  font-weight: 800;
+  margin: 10px 0 0 0;
+  line-height: 1.2em;
+  background: linear-gradient(to left, #000, #444);
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#usernameInput {
+  padding: 12px 22px;
+  width: 150%;
+  font-size: 1.2em;
+  border: none;
+  background: #fff;
+  margin-left: 5px;
+}
+#usernameInput:focus {
+  outline: none;
+}
+.input_cont {
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  box-shadow: 0 15px 47px 0 #e9e7ef;
+  width: 100%;
+}
+.avatar {
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 15px 47px 0 #e9e7ef;
+  border-radius: 5px;
+}
+.addUsername {
+  background: linear-gradient(to top, #8557c6, #eb78f9);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  margin-top: 8px;
+}
