@@ -8,6 +8,20 @@ import Output from "../output/Output";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Contributors from "../contributors/Contributors";
 
+import {
+  ApolloClient,
+  ApolloProvider,
+  HttpLink,
+  InMemoryCache,
+} from "@apollo/client";
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: new HttpLink({
+    uri: "https://api.github.com/graphql",
+  }),
+});
+
 const App = () => {
   const [username, setUsername] = useState("saviomartin");
 
@@ -26,7 +40,9 @@ const App = () => {
         </Route>
         <Route path="/build/:username">
           <Header />
-          <Output />
+          <ApolloProvider client={client}>
+            <Output />
+          </ApolloProvider>
         </Route>
         <Route path="/contributors">
           <Header />

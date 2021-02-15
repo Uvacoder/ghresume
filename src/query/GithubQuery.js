@@ -1,5 +1,7 @@
-const RESUME_COMPONENTS = `
-  query{
+import { gql } from "@apollo/client";
+
+const RESUME_COMPONENTS = gql`
+  {
     user(login: "saviomartin") {
       bio
       avatarUrl
