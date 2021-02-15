@@ -49,15 +49,7 @@ const Output = () => {
       });
   }, []);
 
-  return (
-    <div className="output">
-      <div>
-        In React Router v5, You can use hooks to get parameters.
-        <br />
-        Current id parameter is <strong>{params.username}</strong>
-      </div>
-    </div>
-  );
+  return <h1>Hi</h1>;
 };
 
 export default Output;
