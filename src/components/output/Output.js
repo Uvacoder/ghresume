@@ -1,38 +1,53 @@
-import { useQuery } from "@apollo/client";
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import RESUME_COMPONENTS from "../../query/GithubQuery";
 
 const Output = () => {
   let params = useParams();
 
-  // const githubUserAPI = "https://api.github.com/users/" + params.username;
-  // useEffect(() => {
-  //   fetch(githubUserAPI)
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }, []);
-  const { loading, error, data } = useQuery(RESUME_COMPONENTS);
+  const github_data = {
+    token: "11d8b0f36ce132818cead3107f3b5d9db0784454",
+    username: "saviomartin",
+  };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
-  if (data) console.log(data);
+  const githubUserAPI = "https://api.github.com/users/" + params.username;
+  useEffect(() => {
+    fetch("https://api.github.com/graphql", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authentication: "token 11d8b0f36ce132818cead3107f3b5d9db0784454",
+      },
+      body: JSON.stringify({
+        query: `
+    query {
+      user(login: "saviomartin") {
+        bio
+        avatarUrl
+        createdAt
+        name
+        websiteUrl
+        url
+        twitterUsername
+        isHireable
+        location
+      }
+    }
+    `,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
 
   return (
-    <h1>
-      Current id parameter is <strong>{params.username}</strong>
-    </h1>
+    <div className="output">
+      <div>
+        In React Router v5, You can use hooks to get parameters.
+        <br />
+        Current id parameter is <strong>{params.username}</strong>
+      </div>
+    </div>
   );
-
-  // return (
-  //   <div className="output">
-  //     <div>
-  //       In React Router v5, You can use hooks to get parameters.
-  //       <br />
-  //       Current id parameter is <strong>{params.username}</strong>
-  //     </div>
-  //   </div>
-  // );
 };
 
 export default Output;
