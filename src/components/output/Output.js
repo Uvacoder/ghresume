@@ -15,7 +15,7 @@ const Output = () => {
   const { loading, error, data } = useQuery(RESUME_COMPONENTS);
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Something went wrong</p>;
+  if (error) return <p>{error}</p>;
   if (data) console.log(data);
 
   return (
