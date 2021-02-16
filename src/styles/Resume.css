@@ -1,0 +1,162 @@
+@import url("./Loader.css");
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+.output {
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+.loader {
+  height: 90vh;
+  width: 100%;
+}
+.playfair {
+  font-family: "Playfair Display", sans-serif !important;
+}
+.resume * {
+  font-family: "Raleway", sans-serif;
+}
+.resume {
+  margin: 80px;
+  height: 653px;
+  width: 500px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 15px 47px 0 #e9e7ef;
+}
+.resume a {
+  text-decoration: none;
+  color: #000;
+}
+.resume_left {
+  width: 36%;
+  height: 100%;
+  background: #eef1f0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.resume_right {
+  height: 100%;
+  width: 64%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 15px;
+}
+.profilePic {
+  height: 135px;
+  box-shadow: 0 15px 47px 0 #bbb;
+  border-radius: 10px;
+  width: 135px;
+}
+.resume_left_top {
+  flex-direction: column;
+  padding: 40px 10px;
+  text-align: center;
+}
+.resume_left_top h1 {
+  margin-top: 10px;
+
+  line-height: 1.2em;
+  font-size: 2.2em;
+}
+.resume_left_bottom {
+  padding-bottom: 30px;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 15px;
+}
+.resume_left_bottom .MuiSvgIcon-root {
+  font-size: 19px;
+  margin-right: 3px;
+}
+.publicUrls {
+  justify-content: flex-start;
+  margin-top: 5px;
+}
+.publicUrls * {
+  font-weight: 500;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background: #444;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.resume_right_top {
+  margin-top: 30px;
+}
+.resume_right_bottom {
+  margin-bottom: 30px;
+}
+h4 {
+  color: #444;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+li {
+  font-size: 0.85em;
+  font-family: "Poppins", sans-serif !important;
+  line-height: 1.4em;
+  color: #444;
+}
+.resume_right_comp {
+  width: 100%;
+}
+ul {
+  margin-left: 15px;
+}
+.repos {
+  justify-content: space-between;
+}
+.codeColor {
+  height: 12px;
+  width: 12px;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+.skills {
+  justify-content: flex-start;
+  margin-left: -3px;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.skill {
+  padding: 4px 7px;
+  background: #eef1f0;
+  border-radius: 5px;
+  color: #000;
+  margin: 2px 3px;
+  border: 1px solid #eee;
+}
+.icons {
+  justify-content: space-between;
+  width: 55%;
+  overflow: hidden;
+}
+.repo_details {
+  width: 45%;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+.count {
+  justify-content: flex-end !important;
+}
+.openCode .MuiSvgIcon-root {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.codeType {
+  width: 65%;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.repos h5 {
+  font-weight: 500;
+}
+.starCount {
+  justify-content: flex-start !important;
+  width: 50px;
+  margin-right: -10px;
+}

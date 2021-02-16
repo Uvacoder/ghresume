@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import RESUME_COMPONENTS from "../../query/GithubQuery";
-import "../../styles/resume.css";
+import "../../styles/Resume.css";
 
 import { gql } from "@apollo/client";
 import Resume from "../resume/Resume";
@@ -34,7 +34,7 @@ const Output = () => {
     console.log(data);
     return (
       <div className="output flex">
-        <Resume data={data} />
+        <Resume data={data} username={params.username} />
       </div>
     );
   }

@@ -1,3 +1,0 @@
-const GITHUB_TOKEN = "11d8b0f36ce132818cead3107f3b5d9db0784454";
-
-export default GITHUB_TOKEN;

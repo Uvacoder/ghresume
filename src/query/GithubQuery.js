@@ -5,8 +5,11 @@ const RESUME_COMPONENTS = `
   name
   websiteUrl
   url
+  email
   twitterUsername
   isHireable
+  isCampusExpert
+  isDeveloperProgramMember
   location
   hovercard {
     contexts {
