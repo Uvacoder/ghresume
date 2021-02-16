@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.3.10",
+    "@octokit/graphql": "^4.6.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.0",
+    "github-api": "^3.4.0",
     "graphql": "^15.5.0",
     "hookrouter": "^1.2.5",
     "react": "^17.0.1",

@@ -5,7 +5,7 @@ import Input from "../input/Input";
 import { useState } from "react";
 import Output from "../output/Output";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Contributors from "../contributors/Contributors";
 import {
   ApolloClient,
@@ -14,10 +14,12 @@ import {
   InMemoryCache,
 } from "@apollo/client";
 
+const githubToken = "11d8b0f36ce132818cead3107f3b5d9db0784454";
+
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
-    uri: "https://api.github.com/graphql",
+    uri: `https://api.github.com/graphql?access_token=${githubToken}`,
   }),
 });
 
