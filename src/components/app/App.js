@@ -14,7 +14,8 @@ import {
   InMemoryCache,
 } from "@apollo/client";
 
-const githubToken = "11d8b0f36ce132818cead3107f3b5d9db0784454";
+const githubToken = process.env.REACT_APP_GITHUB_TOKEN;
+console.log(githubToken);
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
