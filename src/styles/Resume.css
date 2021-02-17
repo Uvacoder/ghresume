@@ -162,8 +162,11 @@ ul {
 .margin40 {
   margin-top: -40px;
 }
-@media print {
-  .hide-print {
-    display: none;
-  }
+.sampleResume {
+  height: 660px;
+  width: 500px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 15px 47px 0 #e9e7ef;
+  z-index: 1;
 }
