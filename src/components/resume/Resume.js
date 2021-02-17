@@ -3,13 +3,23 @@ import {
   GitHub,
   Language,
   Launch,
+  LocationOn,
   MailOutlineRounded,
   StarOutlineRounded,
   Twitter,
 } from "@material-ui/icons";
 import "../../styles/Resume.css";
+import $ from "jquery";
 
 const Resume = ({ data, username }) => {
+  $(() => {
+    [...$(".skill")].reduce((a, e) => {
+      if (a[e.textContent]) e.replaceWith("");
+      else a[e.textContent] = !0;
+      return a;
+    }, {});
+  });
+
   return (
     <div className="resume flex">
       <div className="resume_left flex">
@@ -56,6 +66,14 @@ const Resume = ({ data, username }) => {
           ) : (
             ""
           )}
+          {data.user.location ? (
+            <div className="publicUrls flex">
+              <LocationOn />
+              <h5>{data.user.location}</h5>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
       <div className="resume_right flex">
@@ -66,14 +84,14 @@ const Resume = ({ data, username }) => {
             <h4>{data.user.bio}</h4>
           </div>
         ) : (
-          ""
+          <div className="margin40"></div>
         )}
 
         <div className="resume_right_top_mid resume_right_comp">
           <h2 className="playfair">Github Status</h2>
           <div className="line"></div>
           <ul>
-            <li>28 Public Repositories</li>
+            <li>{data.user.repositories.totalCount} Public Repositories</li>
             <li>{data.user.followers.totalCount} Followers</li>
             <li>
               {
@@ -96,40 +114,75 @@ const Resume = ({ data, username }) => {
             ) : (
               ""
             )}
+
+            {data.user.hovercard.contexts[0] ? (
+              <li>{data.user.hovercard.contexts[0].message}</li>
+            ) : (
+              ""
+            )}
           </ul>
         </div>
-        <div className="resume_right_mid resume_right_comp">
-          <h2 className="playfair">Skills</h2>
-          <div className="line"></div>
-          <div className="skills flex">
-            <h4 className="skill">Javascript</h4>
-            <h4 className="skill">CSS</h4>
-            <h4 className="skill">Javascript</h4>
-            <h4 className="skill">CSS</h4>
-            <h4 className="skill">Javascript</h4>
-            <h4 className="skill">CSS</h4>
-            <h4 className="skill">Javascript</h4>
-            <h4 className="skill">CSS</h4>
+        {data.user.pinnedItems.totalCount > 1 ? (
+          <div className="resume_right_mid resume_right_comp">
+            <h2 className="playfair">Top Skills</h2>
+            <div className="line"></div>
+            <div className="skills flex">
+              {data.user.pinnedItems.nodes.map((repo) => (
+                <>
+                  <h4 className="skill">{repo.primaryLanguage.name}</h4>
+                </>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="resume_right_bottom resume_right_comp">
-          <h2 className="playfair">Featured Projects</h2>
-          <div className="line"></div>
-          {data.user.pinnedItems.nodes.map((repo) => (
-            <a href={repo.url} key={repo.id}>
-              <div className="repos flex">
+        ) : (
+          <div className="resume_right_mid resume_right_comp">
+            <h2 className="playfair">Top Skills</h2>
+            <div className="line"></div>
+            <div className="skills flex">
+              {data.user.topRepositories.edges.map((repo) => (
+                <>
+                  {repo.node.primaryLanguage ? (
+                    <h4 className="skill">{repo.node.primaryLanguage.name}</h4>
+                  ) : (
+                    <h4 className="skill">Markdown</h4>
+                  )}
+                </>
+              ))}
+            </div>
+          </div>
+        )}
+        {data.user.pinnedItems.totalCount > 1 ? (
+          <div className="resume_right_bottom resume_right_comp">
+            <h2 className="playfair">Featured Projects</h2>
+            <div className="line"></div>
+            {data.user.pinnedItems.nodes.map((repo) => (
+              <div className="repos flex" key={repo.id}>
                 <div className="repo_details flex">
                   <h5>{repo.name}</h5>
                 </div>
                 <div className="icons flex">
                   <div className="codeType flex">
-                    <div
-                      className="codeColor"
-                      style={{
-                        background: `${repo.languages.edges[0].node.color}`,
-                      }}
-                    ></div>
-                    <h5>{repo.primaryLanguage.name}</h5>
+                    {repo.primaryLanguage ? (
+                      <>
+                        <div
+                          className="codeColor"
+                          style={{
+                            background: `${repo.primaryLanguage.color}`,
+                          }}
+                        ></div>
+                        <h5>{repo.primaryLanguage.name}</h5>
+                      </>
+                    ) : (
+                      <>
+                        <div
+                          className="codeColor"
+                          style={{
+                            background: "#233",
+                          }}
+                        ></div>
+                        <h5>Markdown</h5>
+                      </>
+                    )}
                   </div>
                   <div className="count flex">
                     <div className="starCount flex">
@@ -146,9 +199,61 @@ const Resume = ({ data, username }) => {
                   </div>
                 </div>
               </div>
-            </a>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div className="resume_right_bottom resume_right_comp">
+            <h2 className="playfair">Featured Projects</h2>
+            <div className="line"></div>
+            {data.user.topRepositories.edges.map((repo) => (
+              <div className="repos flex" key={repo.id}>
+                <div className="repo_details flex">
+                  <h5>{repo.node.name}</h5>
+                </div>
+                <div className="icons flex">
+                  <div className="codeType flex">
+                    {repo.node.primaryLanguage ? (
+                      <>
+                        <div
+                          className="codeColor"
+                          style={{
+                            background: `${repo.node.primaryLanguage.color}`,
+                          }}
+                        ></div>
+                        <h5>{repo.node.primaryLanguage.name}</h5>
+                      </>
+                    ) : (
+                      <>
+                        <div
+                          className="codeColor"
+                          style={{
+                            background: "#233",
+                          }}
+                        ></div>
+                        <h5>Markdown</h5>
+                      </>
+                    )}
+                  </div>
+                  <div className="count flex">
+                    <div className="starCount flex">
+                      <StarOutlineRounded />
+                      {repo.node.stargazerCount > 1000 ? (
+                        <h5>
+                          {Math.round(repo.node.stargazerCount / 1000) + "k"}
+                        </h5>
+                      ) : (
+                        <h5>{repo.node.stargazerCount}</h5>
+                      )}
+                    </div>
+                    <a href={repo.node.url} className="openCode">
+                      <Launch />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
