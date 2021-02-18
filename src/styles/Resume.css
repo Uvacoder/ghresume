@@ -1,10 +1,12 @@
 @import url("./Loader.css");
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 .output {
-  height: 100vh;
+  height: 150vh;
   width: 100%;
   flex-direction: column;
+  overflow: hidden;
 }
 .loader {
   height: 90vh;
@@ -16,12 +18,18 @@
 .resume * {
   font-family: "Raleway", sans-serif;
 }
+.sampleResume {
+  height: 700px;
+  width: 500px;
+}
 .resume {
-  height: 660px;
+  height: 700px;
   width: 500px;
   background: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 15px 47px 0 #e9e7ef;
+  margin-bottom: 40px;
+  z-index: 1;
 }
 .resume a {
   text-decoration: none;
@@ -30,7 +38,7 @@
 .resume_left {
   width: 36%;
   height: 100%;
-  background: #eef1f0;
+  background: #eef1f0 !important;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -159,14 +167,10 @@ ul {
   width: 50px;
   margin-right: -10px;
 }
+.starCount h5 {
+  font-family: "Poppins", sans-serif !important;
+  color: #444;
+}
 .margin40 {
   margin-top: -40px;
-}
-.sampleResume {
-  height: 660px;
-  width: 500px;
-  background: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 15px 47px 0 #e9e7ef;
-  z-index: 1;
 }
