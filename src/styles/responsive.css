@@ -1,5 +1,6 @@
 @media (max-width: 500px) {
-  .App {
+  .App,
+  #root {
     overflow: hidden !important;
   }
   .main {
@@ -9,7 +10,7 @@
     height: 100vh;
   }
   .main__left {
-    width: 95% !important;
+    width: 90% !important;
     padding: 0 !important;
   }
   .main__right {
@@ -19,9 +20,27 @@
     right: 0 !important;
     width: 100% !important;
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.1;
   }
   .output {
     display: block !important;
+  }
+  .left {
+    width: 100% !important;
+  }
+  .sampleResume {
+    padding: 10px;
+  }
+  .resume {
+    width: 90% !important;
+    margin-left: 35px;
+    border: 1px solid #000;
+  }
+  .profilePic {
+    height: 100px !important;
+    width: 100px !important;
+  }
+  .outputText {
+    font-size: 1.7em !important;
   }
 }

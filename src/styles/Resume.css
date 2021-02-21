@@ -5,7 +5,6 @@
 .output {
   height: 150vh;
   width: 100%;
-
   overflow: hidden;
 }
 .left {
@@ -60,11 +59,13 @@
 }
 .sampleResume {
   height: 700px;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
 }
 .resume {
   height: 700px;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   background: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 15px 47px 0 #e9e7ef;
@@ -119,6 +120,7 @@
 .publicUrls {
   justify-content: flex-start;
   margin-top: 5px;
+  overflow: hidden;
 }
 .publicUrls * {
   font-weight: 500;
