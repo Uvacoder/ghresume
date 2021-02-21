@@ -24,9 +24,12 @@
   }
   .output {
     display: block !important;
+    height: 165vh !important;
+    overflow: hidden !important;
   }
   .left {
     width: 100% !important;
+    height: 80% !important;
   }
   .sampleResume {
     padding: 10px;
@@ -42,5 +45,12 @@
   }
   .outputText {
     font-size: 1.7em !important;
+  }
+  .right {
+    position: absolute !important;
+    width: 100%;
+    height: auto !important;
+    bottom: -65%;
+    right: 45%;
   }
 }
