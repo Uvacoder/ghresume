@@ -1,0 +1,14 @@
+@media (max-width: 500px) {
+  .main {
+    display: block !important;
+    overflow: hidden !important;
+    width: 90%;
+    height: 100vh;
+  }
+  .main__left {
+    width: 90% !important;
+  }
+  .main__right {
+    display: none !important;
+  }
+}
