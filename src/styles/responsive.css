@@ -1,14 +1,24 @@
 @media (max-width: 500px) {
-  .main {
-    display: block !important;
+  .App {
     overflow: hidden !important;
-    width: 90%;
+  }
+  .main {
+    display: flex !important;
+    overflow: hidden !important;
+    width: 90% !important;
     height: 100vh;
   }
   .main__left {
-    width: 90% !important;
+    width: 95% !important;
+    padding: 0 !important;
   }
   .main__right {
-    display: none !important;
+    position: absolute !important;
+    overflow: hidden !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: -1;
+    opacity: 0.2;
   }
 }
