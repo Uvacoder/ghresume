@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "GH Resume",
+  "name": "GH Resume",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,35 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "assets/logo16.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "16x16"
+    },
+    {
+      "src": "assets/logo32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "assets/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.google.samples.apps.iosched"
+    }
+  ],
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
