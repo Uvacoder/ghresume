@@ -1,3 +1,4 @@
+import { Tooltip } from "@material-ui/core";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import monaHeart from "../../assets/mona-heart.png";
@@ -18,15 +19,19 @@ const Input = ({ username, handleUserName }) => {
           Generate professional resume fast and easy. We matter you future.
         </h2>
         <div className="input_cont flex">
-          <img
-            src={
-              username < 1
-                ? "https://avatars.githubusercontent.com/github?s=60"
-                : "https://avatars.githubusercontent.com/" + username + "?s=60"
-            }
-            alt=""
-            className="avatar"
-          />
+          <Tooltip title="User Avatar">
+            <img
+              src={
+                username < 1
+                  ? "https://avatars.githubusercontent.com/github?s=60"
+                  : "https://avatars.githubusercontent.com/" +
+                    username +
+                    "?s=60"
+              }
+              alt=""
+              className="avatar"
+            />
+          </Tooltip>
           <input
             type="text"
             id="usernameInput"

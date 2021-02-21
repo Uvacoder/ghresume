@@ -129,7 +129,9 @@ const Resume = ({ data, username }) => {
             <div className="skills flex">
               {data.user.pinnedItems.nodes.map((repo) => (
                 <>
-                  <h4 className="skill">{repo.primaryLanguage.name}</h4>
+                  <h4 className="skill" key={repo.primaryLanguage.name}>
+                    {repo.primaryLanguage.name}
+                  </h4>
                 </>
               ))}
             </div>

@@ -5,8 +5,48 @@
 .output {
   height: 150vh;
   width: 100%;
-  flex-direction: column;
+
   overflow: hidden;
+}
+.left {
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+  width: 50%;
+}
+.right {
+  width: 17.5%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+.nextArrow {
+  color: #eb78f9;
+  margin-bottom: -20px !important;
+  font-size: 8em !important;
+  transition: 0.5s;
+  cursor: not-allowed;
+}
+.nextArrow:hover {
+  color: #8557c6;
+}
+.next {
+  cursor: pointer;
+}
+.try {
+  background: linear-gradient(to top, #8557c6, #eb78f9);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.coming {
+  color: #fff;
+  background: linear-gradient(to top, #8557c6, #eb78f9);
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 400;
 }
 .loader {
   height: 90vh;

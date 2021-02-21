@@ -53,6 +53,7 @@ body {
 }
 .header {
   width: 100%;
+  cursor: pointer;
   padding: 10px;
   justify-content: flex-start !important;
 }

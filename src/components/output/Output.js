@@ -6,8 +6,8 @@ import "../../styles/Resume.css";
 
 import { gql } from "@apollo/client";
 import Resume from "../resume/Resume";
-import { Button } from "@material-ui/core";
-import { GetApp, PictureAsPdf } from "@material-ui/icons";
+import { Button, Tooltip } from "@material-ui/core";
+import { ChevronRight, GetApp, PictureAsPdf } from "@material-ui/icons";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import $ from "jquery";
@@ -37,7 +37,7 @@ const Output = () => {
   function download(url) {
     var a = $("<a style='display:none' id='js-downloder'>")
       .attr("href", url)
-      .attr("download", "test.png")
+      .attr("download", `${params.username}.png`)
       .appendTo("body");
 
     a[0].click();
@@ -58,16 +58,6 @@ const Output = () => {
   }
 
   const printPDF = () => {
-    // const domElement = document.getElementById("resume");
-    // html2canvas(domElement, {
-    //   // using cors to get external images
-    //   useCORS: true,
-    // }).then((canvas) => {
-    //   const imgData = canvas.toDataURL("image/png");
-    //   const pdf = new jsPDF();
-    //   pdf.addImage(imgData, "JPEG", 10, 10);
-    //   pdf.save(`${new Date().toISOString()}.pdf`);
-    // });
     window.print();
   };
 
@@ -87,38 +77,57 @@ const Output = () => {
     console.log(data);
     return (
       <div className="output flex">
-        <div className="cont">
-          <h1 className="raleway outputText">Cheers 🍻, {data.user.name}</h1>
-          <div className="btnCont flex">
-            <Button
-              variant="contained"
-              className="btn raleway"
-              onClick={saveCapture}
-              id="downloadResume"
-            >
-              Download Resume
-              <GetApp className="downloadIcon" />
-            </Button>
-            {isChrome ? (
-              <div className="printCont">
-                <h5 className="printContText">Recommended on Chrome</h5>
+        <div className="left flex">
+          <div className="cont">
+            <h1 className="raleway outputText">Cheers 🍻, {data.user.name}</h1>
+            <div className="btnCont flex">
+              <Tooltip title="Download Resume">
                 <Button
                   variant="contained"
                   className="btn raleway"
-                  onClick={printPDF}
-                  id="printPDFBtn"
+                  onClick={saveCapture}
+                  id="downloadResume"
                 >
-                  Print Resume
-                  <PictureAsPdf className="downloadIcon" />
+                  Download Resume
+                  <GetApp className="downloadIcon" />
                 </Button>
-              </div>
-            ) : (
-              ""
-            )}
+              </Tooltip>
+              {isChrome ? (
+                <div className="printCont">
+                  <h5 className="printContText">Recommended on Chrome</h5>
+                  <Tooltip title="Print Resume">
+                    <Button
+                      variant="contained"
+                      className="btn raleway"
+                      onClick={printPDF}
+                      id="printPDFBtn"
+                    >
+                      Print Resume
+                      <PictureAsPdf className="downloadIcon" />
+                    </Button>
+                  </Tooltip>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+          </div>
+          <div id="resume" className="sampleResume">
+            <Resume
+              data={data}
+              username={params.username}
+              id="finishedResume"
+            />
           </div>
         </div>
-        <div id="resume" className="sampleResume">
-          <Resume data={data} username={params.username} id="finishedResume" />
+        <div className="right flex">
+          <div className="next">
+            <Tooltip title="Coming Soon">
+              <ChevronRight className="nextArrow" />
+            </Tooltip>
+            <h4 className="try">Try theme 2</h4>
+            <h5 className="coming">Coming Soon</h5>
+          </div>
         </div>
       </div>
     );
