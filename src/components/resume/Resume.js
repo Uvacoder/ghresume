@@ -129,7 +129,7 @@ const Resume = ({ data, username }) => {
             <div className="skills flex">
               {data.user.pinnedItems.nodes.map((repo) => (
                 <>
-                  <h4 className="skill" key={repo.primaryLanguage.name}>
+                  <h4 className="skill" key={repo.id}>
                     {repo.primaryLanguage.name}
                   </h4>
                 </>
@@ -142,13 +142,13 @@ const Resume = ({ data, username }) => {
             <div className="line"></div>
             <div className="skills flex">
               {data.user.topRepositories.edges.map((repo) => (
-                <>
+                <div key={repo.id}>
                   {repo.node.primaryLanguage ? (
                     <h4 className="skill">{repo.node.primaryLanguage.name}</h4>
                   ) : (
                     <h4 className="skill">Markdown</h4>
                   )}
-                </>
+                </div>
               ))}
             </div>
           </div>
