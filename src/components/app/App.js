@@ -15,12 +15,12 @@ import {
 } from "@apollo/client";
 import "animate.css/animate.css";
 
-const githubToken = '22c675b88a5caf180286fb706e3357bd31da006d';
+// const githubToken = '39a909a8723b21b9ab2c634fff250d38e55f2809';
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
-    uri: `https://api.github.com/graphql?access_token=${githubToken}`,
+    uri: `https://api.github.com/graphql?access_token=39a909a8723b21b9ab2c634fff250d38e55f2809`,
   }),
 });
 
