@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://saviomartin.github.io/gh-profile-readme-generator">
-    <img alt="GH Resume" src="https://raw.githubusercontent.com/saviomartin/ghresume/main/public/assets/logo512.png" width="60" />
+    <img alt="GH Resume" src="https://raw.githubusercontent.com/saviomartin/ghresume/main/public/assets/logo512.png" width="120" />
   </a>
 </p>
 <h1 align="center">
