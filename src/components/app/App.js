@@ -15,7 +15,7 @@ import {
 } from "@apollo/client";
 import "animate.css/animate.css";
 
-const githubToken = '11d8b0f36ce132818cead3107f3b5d9db0784454';
+const githubToken = '22c675b88a5caf180286fb706e3357bd31da006d';
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
