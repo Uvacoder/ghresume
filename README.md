@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://saviomartin.github.io/gh-profile-readme-generator">
-    <img alt="GitHub Profile Readme Generator" src="https://raw.githubusercontent.com/saviomartin/ghresume/main/src/assets/ghresume.gif" width="60" />
+    <img alt="GH Resume" src="https://raw.githubusercontent.com/saviomartin/ghresume/main/public/assets/logo512.png" width="60" />
   </a>
 </p>
 <h1 align="center">
@@ -24,12 +24,10 @@
 <a href="https://github.com/saviomartin/ghresume/pulls" target="blank">
 <img src="https://img.shields.io/github/issues-pr/saviomartin/ghresume?style=flat-square" alt="ghresume pull-requests"/>
 </a>
-<a href="https://discord.gg/HHMs7Eg" target="blank">
-<img src="https://img.shields.io/discord/735303195105951764?label=Join%20Community&logo=discord&style=flat-square" alt="join discord community of github profile readme generator"/>
-</a>
+
 </p>
 
-<p align="center"><img src="./src/images/ghresume.gif" alt="ghresume gif" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/saviomartin/ghresume/main/src/assets/ghresume.gif" alt="ghresume gif" /></p>
 
 <p align="center">
     <a href="https://saviomartin.github.io/gh-profile-readme-generator" target="blank">View Demo</a>
