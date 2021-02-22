@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://saviomartin.github.io/gh-profile-readme-generator">
-    <img alt="GitHub Profile Readme Generator" src="https://raw.githubusercontent.com/saviomartin/ghresume/main/public/assets/logo512.png?token=AOYHIIAMP2QDV5ZFGKZU74LAHSDRG" width="60" />
+    <img alt="GitHub Profile Readme Generator" src="https://raw.githubusercontent.com/saviomartin/ghresume/main/src/assets/ghresume.gif" width="60" />
   </a>
 </p>
 <h1 align="center">
@@ -49,7 +49,7 @@ GH Resume is for you. You just have to give your github username and the rest of
 <img src="https://img.shields.io/website?url=https%3A%2F%2Fsaviomartin.github.io%2Fgh-profile-readme-generator&logo=github&style=flat-square" />
 </a>
 
-Try the tool: [GH Resume](https://saviomartin.github.io/gh-profile-readme-generator)
+Try the tool: [GH Resume](https://saviomartin.github.io/ghresume)
 
 ## 🧐 Features
 
