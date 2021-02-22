@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://saviomartin.github.io/gh-profile-readme-generator">
+    <img alt="GitHub Profile Readme Generator" src="https://raw.githubusercontent.com/saviomartin/ghresume/main/public/assets/logo192.png?token=AOYHIIC3I4SVOQKA6PQXMRLAHR5SW" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  GH Resume
+</h1>
+<h5 align="center">Open source Resume builder from Github Username ✨️</h5>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<a href="https://github.com/saviomartin/github-profile-readme-generator/blob/master/LICENSE" target="blank">
+<img src="https://img.shields.io/github/license/saviomartin/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator licence" />
+</a>
+<a href="https://github.com/saviomartin/github-profile-readme-generator/fork" target="blank">
+<img src="https://img.shields.io/github/forks/saviomartin/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator forks"/>
+</a>
+<a href="https://github.com/saviomartin/github-profile-readme-generator/stargazers" target="blank">
+<img src="https://img.shields.io/github/stars/saviomartin/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator stars"/>
+</a>
+<a href="https://github.com/saviomartin/github-profile-readme-generator/issues" target="blank">
+<img src="https://img.shields.io/github/issues/saviomartin/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator issues"/>
+</a>
+<a href="https://github.com/saviomartin/github-profile-readme-generator/pulls" target="blank">
+<img src="https://img.shields.io/github/issues-pr/saviomartin/github-profile-readme-generator?style=flat-square" alt="github-profile-readme-generator pull-requests"/>
+</a>
+<a href="https://discord.gg/HHMs7Eg" target="blank">
+<img src="https://img.shields.io/discord/735303195105951764?label=Join%20Community&logo=discord&style=flat-square" alt="join discord community of github profile readme generator"/>
+</a>
+</p>
 
-## Available Scripts
+<p align="center"><img src="./src/images/github-profile-readme-generator.gif" alt="github-profile-readme-generator gif" /></p>
 
-In the project directory, you can run:
+<p align="center">
+    <a href="https://saviomartin.github.io/gh-profile-readme-generator" target="blank">View Demo</a>
+    ·
+    <a href="https://github.com/saviomartin/github-profile-readme-generator/issues/new/choose">Report Bug</a>
+    ·
+    <a href="https://github.com/saviomartin/github-profile-readme-generator/issues/new/choose">Request Feature</a>
+</p>
 
-### `npm start`
+#### Frustrated with designing and editing your Resume?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+GH Resume is for you. You just have to give your github username and the rest of the work like designing, showing your featured projects, your contribution calendar, your status, your social media profiles, etc is done by GH Resume. How cool is that 🙌
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🚀 Demo
 
-### `npm test`
+<a href="https://saviomartin.github.io/gh-profile-readme-generator" target="blank">
+<img src="https://img.shields.io/website?url=https%3A%2F%2Fsaviomartin.github.io%2Fgh-profile-readme-generator&logo=github&style=flat-square" />
+</a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Try the tool: [GH Resume](https://saviomartin.github.io/gh-profile-readme-generator)
 
-### `npm run build`
+## 🧐 Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Just fill in your Github username and minimal, efficient resume is built for you.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Contribution Calendar**
+- **Featured Projects**
+- **Top Repositories**
+- **Main Skills**
+- **Social Media profile (twitter, github, email, website)**
+- **Location**
+- **Github Status (issues, pull requests, followers)**
+- **Organisations**
+- **Website**
+- **Bio**
+- **Primary Languages, star count**
+- **Minimal, Efficient**
+- **Fully Responsive**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+GH resume is capable of generating extraordinary features from just a username, saving a lot of time and increasing your job opportunities. ✨️
 
-### `npm run eject`
+## 🛠️ Installation Steps
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone the repository
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/saviomartin/github-profile-readme-generator.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Change the working directory
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+cd github-profile-readme-generator
+```
 
-## Learn More
+3. Install dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Rename the `.env.sample` to `.env` and add your Github Token.
 
-### Code Splitting
+```bash
+REACT_APP_GITHUB_TOKEN = YOUR_GITHUB_TOKEN_HERE
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Run the app
 
-### Analyzing the Bundle Size
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🌟 You are all set!
 
-### Making a Progressive Web App
+## 🍰 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/saviomartin/github-profile-readme-generator/compare).
 
-### Advanced Configuration
+Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 💻 Built with
 
-### Deployment
+- [React](https://reactjs.org/)
+- [Jquery](https://jquery.com/)
+- [GraphQL](https://graphql.org/)
+- [Github GraphQL API](https://docs.github.com/en/graphql)
+- [Material UI](http://material-ui.com/): for styling and Icons
+- [Animate.css](https://animate.style/): for smooth Animations
+- [AOS](https://michalsnik.github.io/aos/): for scroll animations
+- [html2canvas](https://html2canvas.hertzen.com/): for downloading Resume
+- [react-router-dom](https://reactrouter.com/web/guides/quick-start): for routing
+- [AWS Amplify](https://aws.amazon.com/amplify/): for hosting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🙏 Support
 
-### `npm run build` fails to minify
+#### This project needs a 🌟 from you
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<hr>
+<p align="center">
+Developed with ❤️ in India 🇮🇳 
+</p>
