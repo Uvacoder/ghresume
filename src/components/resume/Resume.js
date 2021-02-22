@@ -77,7 +77,7 @@ const Resume = ({ data, username }) => {
         </div>
       </div>
       <div className="resume_right flex">
-        {data.user.bio.length > 8 ? (
+        {data.user.bio ? (
           <div className="resume_right_top resume_right_comp">
             <h2 className="playfair">About</h2>
             <div className="line"></div>
@@ -205,7 +205,7 @@ const Resume = ({ data, username }) => {
           </div>
         ) : (
           <div className="resume_right_bottom resume_right_comp">
-            <h2 className="playfair">Featured Projects</h2>
+            <h2 className="playfair">Popular Projects</h2>
             <div className="line"></div>
             {data.user.topRepositories.edges.map((repo) => (
               <div className="repos flex" key={repo.id}>

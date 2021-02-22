@@ -9,7 +9,7 @@ const allContributors = [
   },
   {
     name: "Divya Xavier",
-    github: "martinkp",
+    github: "divya",
   },
 ];
 

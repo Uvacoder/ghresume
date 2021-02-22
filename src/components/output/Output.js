@@ -77,7 +77,7 @@ const Output = () => {
     console.log(data);
     return (
       <div className="output flex">
-        <div className="left flex">
+        <div className="left flex animate__animated animate__fadeInLeft">
           <div className="cont">
             <h1 className="raleway outputText">Cheers 🍻, {data.user.name}</h1>
             <div className="btnCont flex">
@@ -95,17 +95,15 @@ const Output = () => {
               {isChrome ? (
                 <div className="printCont">
                   <h5 className="printContText">Recommended on Chrome</h5>
-                  <Tooltip title="Print Resume">
-                    <Button
-                      variant="contained"
-                      className="btn raleway"
-                      onClick={printPDF}
-                      id="printPDFBtn"
-                    >
-                      Print Resume
-                      <PictureAsPdf className="downloadIcon" />
-                    </Button>
-                  </Tooltip>
+                  <Button
+                    variant="contained"
+                    className="btn raleway"
+                    onClick={printPDF}
+                    id="printPDFBtn"
+                  >
+                    Print Resume
+                    <PictureAsPdf className="downloadIcon" />
+                  </Button>
                 </div>
               ) : (
                 ""
@@ -121,7 +119,7 @@ const Output = () => {
           </div>
         </div>
         <div className="right flex">
-          <div className="next">
+          <div className="next animate__animated animate__fadeInRight">
             <Tooltip title="Coming Soon">
               <ChevronRight className="nextArrow" />
             </Tooltip>

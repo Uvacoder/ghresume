@@ -14,12 +14,12 @@ const Input = ({ username, handleUserName }) => {
 
   return (
     <div className="main flex">
-      <div className="main__left flex">
+      <div className="main__left flex animate__animated animate__fadeInLeft">
         <h2 className="raleway main__text">
           Generate professional resume fast and easy. We matter you future.
         </h2>
         <div className="input_cont flex">
-          <Tooltip title="User Avatar">
+          <Tooltip title={username}>
             <img
               src={
                 username < 1
@@ -45,7 +45,11 @@ const Input = ({ username, handleUserName }) => {
         </h5>
       </div>
       <div className="main__right flex">
-        <img src={monaHeart} alt="Mona Heart" />
+        <img
+          src={monaHeart}
+          alt="Mona Heart"
+          className="animate__animated animate__fadeInRight"
+        />
       </div>
     </div>
   );

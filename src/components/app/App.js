@@ -13,10 +13,9 @@ import {
   HttpLink,
   InMemoryCache,
 } from "@apollo/client";
-import Design from "./design";
+import "animate.css/animate.css";
 
 const githubToken = process.env.REACT_APP_GITHUB_TOKEN;
-console.log(githubToken);
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -50,9 +49,6 @@ const App = () => {
         <Route path="/contributors">
           <Header />
           <Contributors />
-        </Route>
-        <Route path="/design">
-          <Design />
         </Route>
       </Switch>
     </Router>

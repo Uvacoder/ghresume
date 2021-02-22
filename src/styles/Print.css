@@ -7,14 +7,16 @@
   }
   .cont,
   .header,
-  .btnCont .github-corner {
+  .github-corner {
     display: none !important;
   }
   .output {
     height: 100vh !important;
     width: 100vw !important;
   }
-
+  .MuiButtonBase-root[area-describedby="mui-65288"] {
+    visibility: hidden !important;
+  }
   .resume {
     height: 760px !important;
     width: 525px !important;
@@ -22,6 +24,10 @@
     box-shadow: none !important;
     border: none !important;
     margin-top: -15px;
-    margin-left: -12px;
+    margin-left: 0;
+    z-index: 999 !important;
+  }
+  .github-corner {
+    visibility: hidden !important;
   }
 }

@@ -24,12 +24,14 @@
   }
   .output {
     display: block !important;
-    height: 165vh !important;
+    height: 145vh !important;
     overflow: hidden !important;
   }
   .left {
     width: 100% !important;
-    height: 80% !important;
+    height: 100% !important;
+    text-align: center;
+    align-items: flex-start;
   }
   .sampleResume {
     padding: 10px;
@@ -47,10 +49,15 @@
     font-size: 1.7em !important;
   }
   .right {
-    position: absolute !important;
-    width: 100%;
-    height: auto !important;
-    bottom: -65%;
-    right: 45%;
+    display: none !important;
+  }
+  .publicUrls {
+    width: 90% !important;
+  }
+  .publicUrls h5 {
+    font-size: 11px;
+  }
+  .main__text {
+    font-size: 1.9em !important;
   }
 }

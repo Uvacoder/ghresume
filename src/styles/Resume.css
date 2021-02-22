@@ -12,6 +12,7 @@
   align-items: flex-end;
   height: 100%;
   width: 50%;
+  text-align: left;
 }
 .right {
   width: 17.5%;
@@ -26,12 +27,13 @@
   transition: 0.5s;
   cursor: not-allowed;
 }
+.next {
+  cursor: not-allowed;
+}
 .nextArrow:hover {
   color: #8557c6;
 }
-.next {
-  cursor: pointer;
-}
+
 .try {
   background: linear-gradient(to top, #8557c6, #eb78f9);
   background-size: cover;
@@ -89,6 +91,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 40px 15px;
+  z-index: 999;
 }
 .profilePic {
   height: 135px;
@@ -120,7 +123,8 @@
 .publicUrls {
   justify-content: flex-start;
   margin-top: 5px;
-  overflow: hidden;
+  overflow: hidden !important;
+  width: 100%;
 }
 .publicUrls * {
   font-weight: 500;
@@ -154,6 +158,7 @@ li {
 }
 ul {
   margin-left: 15px;
+  text-align: left;
 }
 .repos {
   justify-content: space-between;

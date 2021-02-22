@@ -3,7 +3,11 @@ import React from "react";
 const GithubCorner = () => {
   return (
     <>
-      <a target="_" href="https://your-url" className="github-corner">
+      <a
+        target="_"
+        href="https://github.com/saviomartin/ghresume"
+        className="github-corner"
+      >
         <svg
           width="80"
           height="80"
